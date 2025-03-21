@@ -1,0 +1,7 @@
+git+https://github.com/IOG-Foundation/flower@iog-ray-cluster-2.30.0
+torch==2.5.1
+torchvision==0.20.1
+flwr-datasets[vision]
+datasets==2.14.6
+pyopenssl
+cryptography

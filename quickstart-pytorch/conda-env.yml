@@ -1,0 +1,12 @@
+name: ray-env
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - pytorch=2.5.1
+  - torchvision=0.20.1
+  - pip
+  - pip:
+      - flwr[simulation]>=1.16.0
+      - flwr-datasets[vision]>=0.5.0
+

@@ -1,0 +1,11 @@
+name: ray-env
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - pytorch=2.5.1
+  - torchvision=0.20.1
+  - pip
+  - pip:
+      - git+https://github.com/IOG-Foundation/flower@iog-ray-cluster-2.30.0
+      - flwr-datasets[vision]
