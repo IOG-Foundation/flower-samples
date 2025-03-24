@@ -42,7 +42,7 @@ options.num-supernodes = 10
 options.backend.client-resources.num-cpus = 2 # each ClientApp assumes to use 2CPUs
 options.backend.client-resources.num-gpus = 0.2 # at most 5 ClientApp will run in a given GPU
 
-[tool.flwr.federations.simulation-gpu-1000]
-options.num-supernodes = 1000
+[tool.flwr.federations.simulation-gpu]
+options.num-supernodes = 10
 options.backend.client-resources.num-cpus = 2
 options.backend.client-resources.num-gpus = 0.2
