@@ -6,6 +6,10 @@ framework: [torch, torchvision]
 
 # Federated Learning with PyTorch and Flower (Quickstart Example)
 
+**Note:** Readme as from [Flower quickstart PyTorch example](https://github.com/adap/flower/tree/96f996207da7e3147506e4be4fe374cb39243e28/examples/quickstart-pytorch). For additional context on submitting as Job on a Ray Cluster see [README.md](../README.md)
+
+---
+
 This introductory example to Flower uses PyTorch, but deep knowledge of PyTorch is not necessarily required to run the example. However, it will help you understand how to adapt Flower to your use case. Running this example in itself is quite easy. This example uses [Flower Datasets](https://flower.ai/docs/datasets/) to download, partition and preprocess the CIFAR-10 dataset.
 
 ## Set up the project
