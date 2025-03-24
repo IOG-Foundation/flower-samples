@@ -109,7 +109,7 @@ Submit your Flower simulation job:
 ```bash
 ray job submit \
 --runtime-env-json '{"working_dir": ".", "pip": "requirements-iog.txt"}' \
--- flwr run . simulation-gpu-1000 --run-config "num-server-rounds=5"
+-- flwr run . simulation-gpu --run-config "num-server-rounds=5"
 ```
 
 For base conda env:
@@ -117,7 +117,7 @@ For base conda env:
 ```bash
 ray job submit \
 --runtime-env-json '{"working_dir": ".", "conda": "conda-env-iog.yml"}' \
--- flwr run . simulation-gpu-1000 --run-config "num-server-rounds=5"
+-- flwr run . simulation-gpu --run-config "num-server-rounds=5"
 ```
 
 To turn on the `FLWR_SUPRESS_DEPRECATION_WARNINGS` flag:
@@ -125,7 +125,7 @@ To turn on the `FLWR_SUPRESS_DEPRECATION_WARNINGS` flag:
 ```bash
 ray job submit \
 --runtime-env-json '{"working_dir": ".", "conda": "conda-env-iog.yml"}' \
--- FLWR_SUPRESS_DEPRECATION_WARNINGS=true flwr run . simulation-gpu-1000 --run-config "num-server-rounds=5"
+-- FLWR_SUPRESS_DEPRECATION_WARNINGS=true flwr run . simulation-gpu --run-config "num-server-rounds=5"
 ```
 
 ## Troubleshooting
