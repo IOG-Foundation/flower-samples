@@ -19,11 +19,12 @@ This repository provides experimental examples showcasing Flower.ai simulations 
 ## Recommended Versions
 
 ⚠️ **Important:**  
-The Ray version used on the application needs to match the Ray Cluster.
+The Ray version used on the application needs to match the one of the Ray Cluster.
 
-- **When setting up a Ray Cluster**: Mind that Flower `0.16.0` simulation [requires Ray `2.31.0`](https://github.com/adap/flower/blob/8ba9db597b0309a7d34c7595d89a92f378733428/pyproject.toml#L80).
-- **For IOG Ray clusters**: Base image for [IOG Ray Cluster](https://cloud.io.net/) is Ray `2.30.0`. Use the customized Flower fork at [IOG-Foundation/flower@iog-ray-cluster-2.30.0](https://github.com/IOG-Foundation/flower/tree/iog-ray-cluster-2.30.0).
-  - besides custom pinned ray version, it includes [minor changes](https://github.com/IOG-Foundation/flower/commits/iog-ray-cluster-2.30.0/) which could be merged to the main repo if it makes sense for the official release, such as [allow ray nodes nodes to have zero resources](https://github.com/IOG-Foundation/flower/commit/10c9bbf7625e0426e0f76bb3a2497c3068b03c3a) and [flag to supress deprecation warning](https://github.com/IOG-Foundation/flower/commit/aeb8279f301d1780cc52739fe90b878817f2f588).
+Mind that Flower `0.16.0` simulation [requires Ray `2.31.0`](https://github.com/adap/flower/blob/8ba9db597b0309a7d34c7595d89a92f378733428/pyproject.toml#L80).
+
+- **When using IOG Ray clusters**: Use the customized Flower fork at [IOG-Foundation/flower@iog-ray-cluster-2.30.0](https://github.com/IOG-Foundation/flower/tree/iog-ray-cluster-2.30.0) so that it matches the [IOG Ray Cluster](https://cloud.io.net/) based on Ray `2.30.0`
+  - besides custom pinned `2.30.0` ray version, the fork includes [minor changes](https://github.com/IOG-Foundation/flower/commits/iog-ray-cluster-2.30.0/) useful for production Ray cluster, such as [allow ray nodes nodes to have zero resources](https://github.com/IOG-Foundation/flower/commit/10c9bbf7625e0426e0f76bb3a2497c3068b03c3a) and [flag to supress deprecation warning](https://github.com/IOG-Foundation/flower/commit/aeb8279f301d1780cc52739fe90b878817f2f588), which might eventually be merged to the main repo if it makes sense for the official Flower release.
 
 ## How to Execute
 
@@ -48,7 +49,7 @@ flwr run . --run-config "num-server-rounds=5"
 
 ### Ray Job Submission
 
-When submitting the script as a Ray Job, there is no need for local dependencies to be installed (except a matching Ray version `2.31.0`). If you want to submit to your local Ray Cluster, include the ray dashboard on your local environment (`pip install ray[default]==2.31.0`).  
+When submitting the script as a Ray Job, there is no need for local dependencies to be installed (except a matching Ray version `2.31.0`). If you want to submit to your local Ray Cluster, include the ray dashboard on your local environment (`pip install "ray[default]==2.31.0"`) and start a head node (`ray start --head`).
 
 ```bash
 ray job submit \
