@@ -6,6 +6,14 @@ Samples demonstrating how to scale Flower.ai simulations on a Ray Cluster.
 
 ---
 
+## Presentation - Flower AI Summit 2025
+- **Scaling Federated Learning Simulations on Multi-Node Ray Cluster**
+  - [Presentation deck](https://www.slideshare.net/slideshow/flower-ai-summit-2025-scaling-federated-learning-simulations-on-multi-node-ray-cluster/282475612) 
+  - Videos: [Presentation](https://www.youtube.com/live/C0pce6jfcWg?t=37901s) and [interview](https://www.youtube.com/live/C0pce6jfcWg?t=24735s) during the event live stream.
+
+
+---
+
 ## Overview
 
 This repository provides experimental examples showcasing Flower.ai simulations running distributed across multiple nodes and GPUs on a Ray Cluster.
